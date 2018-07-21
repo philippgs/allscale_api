@@ -24,6 +24,13 @@ matrix:
         apt:
           sources: [ llvm-toolchain-trusty-6.0, ubuntu-toolchain-r-test ]
           packages: [ clang-6.0, g++-5 ]
+    - os: linux
+      compiler: clang
+      env: BUILD_TYPE=Debug CXX_EVAL="clang++-7.0" CC_EVAL="clang-7.0"
+      addons:
+        apt:
+          sources: [ llvm-toolchain-trusty, ubuntu-toolchain-r-test ]
+          packages: [ clang-7.0, g++-5 ]
     # ------------- OS X ------------- #
     - os: osx
       osx_image: xcode9.1
@@ -59,6 +66,13 @@ matrix:
         apt:
           sources: [ llvm-toolchain-trusty-6.0, ubuntu-toolchain-r-test ]
           packages: [ clang-6.0, g++-5 ]
+    - os: linux
+      compiler: clang
+      env: BUILD_TYPE=Release CXX_EVAL="clang++-7.0" CC_EVAL="clang-7.0"
+      addons:
+        apt:
+          sources: [ llvm-toolchain-trusty, ubuntu-toolchain-r-test ]
+          packages: [ clang-7.0, g++-5 ]
     # ------------- OS X ------------- #
     - os: osx
       osx_image: xcode9.1
