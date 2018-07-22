@@ -2746,7 +2746,8 @@ namespace algorithm {
 
 	TEST(Pfor,After) {
 
-		const int N = 10;
+		// only declared static to silence MSVC errors...
+		static const int N = 10;
 
 		int* A = new int[N];
 		int* B = new int[N];
@@ -2799,7 +2800,8 @@ namespace algorithm {
 
 	TEST(Pfor,After2D) {
 
-		const int N = 10;
+		// only declared static to silence MSVC errors...
+		static const int N = 10;
 
 		using Point = utils::Vector<int,2>;
 

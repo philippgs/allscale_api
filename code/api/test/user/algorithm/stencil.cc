@@ -448,7 +448,8 @@ namespace algorithm {
 
 		using Impl = TypeParam;
 
-		const int N = 100;
+		// only declared static to silence MSVC errors...
+		static const int N = 100;
 
 		// run one layer of iterations
 		for(int T : { N/2 }) {
@@ -578,7 +579,7 @@ namespace algorithm {
 
 		using namespace implementation::detail;
 
-		auto cur = [](std::size_t idx, const auto& ... deps) {
+		auto cur = [=](std::size_t idx, const auto& ... deps) {
 			// for debugging
 			if (debug) std::cout << idx << " depends on " << std::array<std::size_t,sizeof...(deps)>({{deps...}}) << "\n";
 

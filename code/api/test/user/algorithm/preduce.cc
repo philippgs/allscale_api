@@ -183,8 +183,9 @@ namespace algorithm {
 
 	TEST(Ops, MapReduce3D) {
 		const int X = 10;
-		const int Y = 5;
-		const int Z = 7;
+		// only declared static to silence MSVC errors...
+		static const int Y = 5;
+		static const int Z = 7;
 
 		std::array<int,3> start{{0,0,1}};
 		std::array<int,3> end{{X,Y,Z}};
